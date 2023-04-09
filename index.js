@@ -4,6 +4,10 @@ for(var i = 0; i < document.querySelectorAll(".set button").length; i++){
         var buttonClicked = this.innerHTML;
         makeSound(buttonClicked);
         buttonAnimation(buttonClicked);
+        var buttonHTML = this; 
+        setTimeout(function (){
+            buttonHTML.classList.remove("pressed"); //Remove a classe pressed quando o botão levantar
+        }, 50);
     });
 }
 
